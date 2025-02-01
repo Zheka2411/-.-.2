@@ -4,11 +4,12 @@
 
 class College {
 private:
-    char name[100];
+    char* name;
     Contact contact;
 public:
     College(const char*, Contact);
+    ~College();
     void Show() const;
 };
 
-#endif 
+#endif
