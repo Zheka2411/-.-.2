@@ -1,12 +1,15 @@
-#include "College.h"
+#ifndef COLLEGE_H
+#define COLLEGE_H
+#include "Contact.h"
 
-College::College(const char* n, Contact c) : contact(c) {
-    int i = 0;
-    while (n[i] != '\0' && i < 99) { name[i] = n[i]; i++; }
-    name[i] = '\0';
-}
+class College {
+private:
+    char* name;
+    Contact contact;
+public:
+    College(const char*, Contact);
+    ~College();
+    void Show() const;
+};
 
-void College::Show() const {
-    std::cout << "College Name: " << name << std::endl;
-    contact.Show();
-}
+#endif
