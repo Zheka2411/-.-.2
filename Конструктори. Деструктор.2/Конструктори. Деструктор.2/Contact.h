@@ -4,12 +4,13 @@
 
 class Contact {
 private:
-    char phone[20];
-    char city[50];
-    char country[50];
+    char* phone;
+    char* city;
+    char* country;
 public:
     Contact(const char*, const char*, const char*);
+    ~Contact();
     void Show() const;
 };
 
-#endif 
+#endif
