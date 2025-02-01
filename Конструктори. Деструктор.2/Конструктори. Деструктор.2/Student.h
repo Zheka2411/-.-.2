@@ -4,13 +4,14 @@
 
 class Student {
 private:
-    char fullName[100];
-    char birthDate[20];
+    char* fullName;
+    char* birthDate;
     Contact contact;
     College college;
 public:
     Student(const char*, const char*, Contact, College);
+    ~Student();
     void Show() const;
 };
 
-#endif 
+#endif
